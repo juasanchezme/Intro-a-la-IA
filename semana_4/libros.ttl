@@ -1,0 +1,55 @@
+@prefix ex: <http://www.books.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Definición de clases
+ex:Persona a rdfs:Class .
+ex:Libro a rdfs:Class .
+ex:Autor a rdfs:Class ;
+    rdfs:subClassOf ex:Persona .
+
+# Definición de propiedades
+ex:esAutorDe a rdf:Property ;
+    rdfs:domain ex:Autor ;
+    rdfs:range ex:Libro .
+
+ex:tieneNombre a rdf:Property ;
+    rdfs:domain ex:Persona ;
+    rdfs:range rdfs:Literal .
+
+ex:titulo a rdf:Property ;
+    rdfs:domain ex:Libro ;
+    rdfs:range rdfs:Literal .
+
+# Ejemplos de instancias
+ex:JuanPérez a ex:Autor ;
+    ex:tieneNombre "Juan Pérez" .
+
+ex:ElQuijote a ex:Libro ;
+    ex:titulo "Don Quijote de la Mancha" .
+
+ex:JuanPérez ex:esAutorDe ex:ElQuijote .
+
+ex:MariaLopez a ex:Autor ;
+    ex:tieneNombre "María López" .
+
+ex:LaSombraDelViento a ex:Libro ;
+    ex:titulo "La Sombra del Viento" .
+
+ex:MariaLopez ex:esAutorDe ex:LaSombraDelViento .
+
+ex:GabrielGarciaMarquez a ex:Autor ;
+    ex:tieneNombre "Gabriel García Márquez" .
+
+ex:CienAñosDeSoledad a ex:Libro ;
+    ex:titulo "Cien Años de Soledad" .
+
+ex:GabrielGarciaMarquez ex:esAutorDe ex:CienAñosDeSoledad .
+
+ex:JorgeLuisBorges a ex:Autor ;
+    ex:tieneNombre "Jorge Luis Borges" .
+
+ex:Ficciones a ex:Libro ;
+    ex:titulo "Ficciones" .
+
+ex:JorgeLuisBorges ex:esAutorDe ex:Ficciones .
