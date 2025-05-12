@@ -1,0 +1,20 @@
+@prefix ex: <http://example.org/animal#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:Elefante a ex:Mamifero ;
+    ex:alimentosFavoritos ( "Hojas" "Frutas" "Caña" ) ;
+    ex:edad 10 ;
+    ex:numeroPatas 4 ;
+    foaf:name "Dumbo"@es .
+
+ex:Leon a ex:Mamifero ;
+    ex:edad 5 ;
+    ex:especie "Panthera leo" ;
+    foaf:name "Simba" .
+
+[] a ex:Ave ;
+    ex:color "Amarillo" ;
+    foaf:name "Pájaro sin nombre" .
+
